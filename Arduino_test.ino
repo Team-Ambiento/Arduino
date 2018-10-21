@@ -33,14 +33,28 @@ void fadeColor(int R,int G,int B)
   }
 void loop() 
 {
-fadeColor(255,0,0);
-fadeColor(0,255,0);
-fadeColor(0,0,255);
-fadeColor(255,0,255);
-fadeColor(0,255,255);
-fadeColor(255,255,0);
-
+  blinkColor(255,255,255);
+  
 }
+
+void rainbow()
+{
+  fadeColor(255,0,0);
+  fadeColor(0,255,0);
+  fadeColor(0,0,255);
+  fadeColor(255,0,255);
+  fadeColor(0,255,255);
+  fadeColor(255,255,0);
+}
+
+void blinkColor(int R, int G, int B)
+{
+  fadeColor(R,G,B);
+  delay(400);
+  fadeColor(0,0,0);
+  delay(400);
+}
+
 
 void stripeColor(int R,int G,int B)
 {
